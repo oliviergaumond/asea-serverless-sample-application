@@ -28,23 +28,23 @@ const app = new cdk.App();
 const Prefix = app.node.tryGetContext("applicationPrefixName");
 
 new SEASampleAppStack(app, `${Prefix}Stack`, {
-    env: {
-      account: "968718451842",
-      region: "ca-central-1",
-    },
-    vpcId: "vpc-039d9e918821e4b27",
-    appSubnetIds: ["subnet-001dffdc812465a34", "subnet-09ec3b32aa239bf0a"],
-    appSecurityGroup: "sg-0be13d2ad6f3bb80c",
-    dataSubnetIds: ["subnet-0f2ba3ec8eccddf0b", "subnet-0ca3b089df9c5b812"],
-    dataSecurityGroup: "sg-088403cc6c59ca368",
-    tags: {
-      Application: "Sample Demo",
-    },
-    prefix: Prefix,
-    dbName: "sampleappdb",
-    staticSiteBuildPath: "sample-application/web/dist",
-    apiContainerPath: "../sample-application/api",
-    webSecurityGroup: "sg-05b7d1ac363a3baef",
-    albListenerArn: "arn:aws:elasticloadbalancing:ca-central-1:968718451842:listener/app/Core-mydevacct1-alb/a52d119cb8775847/2ec58eb24965eb66",
-    appDnsName: "api-eba.pub.og-cloud.ca"
-  });
+  env: {
+    account: "",
+    region: "ca-central-1",
+  },
+  vpcId: "vpc-",
+  appSubnetIds: ["subnet-", "subnet-"],
+  appSecurityGroup: "sg-",
+  dataSubnetIds: ["subnet-", "subnet-"],
+  dataSecurityGroup: "sg-",
+  tags: {
+    Application: "Sample Demo",
+  },
+  prefix: Prefix,
+  dbName: "sampleappdb",
+  staticSiteBuildPath: "sample-application/web/dist",
+  apiContainerPath: "../sample-application/api",
+  webSecurityGroup: "sg-",
+  albListenerArn: "arn:aws:elasticloadbalancing:ca-central-1:",
+  appDnsName: "example.com"
+});
