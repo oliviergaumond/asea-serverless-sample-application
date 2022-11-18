@@ -218,7 +218,10 @@ export class ApiTier {
         vpc: props.vpc,
         port: 443,
         protocol: elbv2.ApplicationProtocol.HTTP,
-        targets: [this.fargateService]
+        targets: [this.fargateService],
+        healthCheck: {
+          path: '/healthcheck'
+        }
       }
     );
 
